@@ -616,11 +616,6 @@ video {
   border-radius: 0.125rem;
 }
 
-.rounded-l-lg {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -687,8 +682,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.pb-9 {
-  padding-bottom: 2.25rem;
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .pr-3 {
@@ -713,14 +708,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
-}
-
-.pb-7 {
-  padding-bottom: 1.75rem;
 }
 
 .text-lg {
