@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .menu-items {
+    @apply font-semibold text-sm text-white hover:text-yellow-300;
+  }
+}
