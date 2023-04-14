@@ -4,118 +4,181 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coba Tailwind</title>
+    <title>Website TailwindCSS</title>
     <link rel="stylesheet" href="public/css/final.css" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
-    <!-- section image stikom start -->
-    <section class="pt-2">
-      <div class="container mx-auto flex">
-        <div class="w-full m-auto text-center">
-          <div class="items-center justify-center">
-            <img
-              src="https://stikomambon.ac.id/beta/wp-content/uploads/Untitled-1.jpg"
-              alt=""
-              class="m-auto"
-            />
+    <header
+      class="laptop:grid laptop:grid-cols-2 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400 pb-12 laptop:pb-3"
+    >
+      <!-- section image stikom start -->
+
+      <!-- Column 1 start -->
+      <div class="pt-4">
+        <div class="container mx-auto flex">
+          <div class="w-full m-auto text-center">
+            <div class="items-center justify-center">
+              <a href="">
+                <img
+                  src="https://stikomambon.ac.id/beta/wp-content/uploads/Untitled-1.jpg"
+                  alt=""
+                  class="m-auto"
+                />
+              </a>
+            </div>
+            <h1 class="italic dark:text-white text-slate-500">
+              Excellent in Education
+            </h1>
           </div>
-          <h1 class="m-auto italic text-slate-500">Excellent in Education</h1>
         </div>
       </div>
-    </section>
+      <!-- Column 1 end -->
 
-    <!-- section image stikom end -->
+      <!-- section image stikom end -->
 
-    <!-- section visi misi start -->
-    <section class="pt-4">
-      <div class="container">
-        <div class="w-full">
-          <div class="relative">
-            <div class="relative">
-              <ul class="flex justify-evenly">
-                <li class="hover:underline hover:text-red-600 cursor-pointer">
-                  Home
-                </li>
-                <li class="hover:underline hover:text-red-600 cursor-pointer">
-                  Visi
-                </li>
-                <li class="hover:underline hover:text-red-600 cursor-pointer">
-                  Misi
-                </li>
-                <li class="hover:underline hover:text-red-600 cursor-pointer">
-                  Tujuan
-                </li>
-                <li class="flex gap-1">
-                  <span class="m-auto">
-                    <img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/email_small.png"
-                      alt=""
-                    />
-                  </span>
-                  <span class="m-auto">
-                    <img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/facebook_small.png"
-                      alt=""
-                    />
-                  </span>
-                  <span class="m-auto"
-                    ><img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/twitter_small.png"
-                      alt=""
-                  /></span>
-                  <span class="m-auto"
-                    ><img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/youtube_small.png"
-                      alt=""
-                  /></span>
-                  <span class="m-auto"
-                    ><img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/feed_small.png"
-                      alt=""
-                  /></span>
-                </li>
-                <li></li>
-              </ul>
+      <!-- Column 2 start -->
+      <div>
+        <!-- section visi misi start -->
+        <section class="pt-4">
+          <div class="container">
+            <div class="w-full">
+              <div class="relative">
+                <div class="flex justify-center">
+                  <ul class="flex gap-5 text-sm text-slate-500 dark:text-white">
+                    <li
+                      class="hover:underline hover:text-red-600 cursor-pointer"
+                    >
+                      Home
+                    </li>
+                    <li
+                      class="hover:underline hover:text-red-600 cursor-pointer"
+                    >
+                      Visi Misi
+                    </li>
+                    <li
+                      class="hover:underline hover:text-red-600 cursor-pointer"
+                    >
+                      Tujuan
+                    </li>
+                    <li class="flex gap-1">
+                      <a href="" class="m-auto block">
+                        <img
+                          src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/email_small.png"
+                          alt=""
+                        />
+                      </a>
+                      <a href="" class="m-auto block">
+                        <img
+                          src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/facebook_small.png"
+                          alt=""
+                        />
+                      </a>
+                      <a href="" class="m-auto block"
+                        ><img
+                          src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/twitter_small.png"
+                          alt=""
+                      /></a>
+                      <a href="" class="m-auto block"
+                        ><img
+                          src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/youtube_small.png"
+                          alt=""
+                      /></a>
+                      <a href="" class="m-auto block"
+                        ><img
+                          src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/feed_small.png"
+                          alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <div id="toggle" class="flex">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6 cursor-pointer"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6 cursor-pointer hidden"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+                          />
+                        </svg>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- section visi misi end -->
+        </section>
+        <!-- section visi misi end -->
 
-    <!-- section search start -->
-    <section class="pt-4">
-      <div class="w-full px-2">
-        <div class="flex flex-wrap">
-          <div class="w-full flex">
-            <input
-              type="text"
-              class="w-full bg-slate-200 placeholder:text-slate-400 focus:outline-none pl-2 focus:placeholder:none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 border rounded-tl-md rounded-bl-md"
-              placeholder="Search"
-            />
-            <button
-              class="px-6 py-1 bg-red-500 text-white border hover:bg-red-600 rounded-tr-md rounded-br-md"
-            >
-              Search
-            </button>
+        <!-- section search start -->
+        <section class="pt-4">
+          <div class="w-full px-2">
+            <div class="flex flex-wrap justify-end laptop:justify-center">
+              <div class="w-full flex tablet:flex-initial tablet:max-w-[250px]">
+                <input
+                  type="text"
+                  class="w-full bg-slate-100 placeholder:text-slate-400 focus:outline-none pl-2 focus:ring-1 focus:ring-sky-500 focus:border-sky-500 border rounded-tl-md rounded-bl-md focus:placeholder-transparent"
+                  placeholder="Search"
+                />
+                <button
+                  class="px-6 tablet:px-2 py-1 bg-red-500 text-white border hover:bg-red-600 rounded-tr-md rounded-br-md"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- section search end -->
       </div>
-    </section>
-    <!-- section search end -->
+      <!-- Column 2 end -->
+    </header>
 
     <!-- Section hamburger meu start -->
-    <section class="pt-12">
-      <div class="container bg-slate-300 border-t-[6px] border-t-red-600">
-        <div class="w-full py-4">
+    <section class="">
+      <div
+        class="bg-slate-300 border-t-[6px] border-t-red-600 p-4 dark:bg-gradient-to-tl from-blue-800 via-slate-900 to-slate-600 dark:text-slate-400"
+      >
+        <div class="w-full">
           <div
-            class="flex justify-end pr-6 cursor-pointer"
+            class="flex justify-end cursor-pointer"
             id="hamburger"
             name="hamburger"
           >
             <h1
               id="home"
-              class="hidden font-semibold uppercase text-yellow-500"
+              class="hidden font-semibold uppercase laptop:hidden text-yellow-500"
             >
               Home
             </h1>
@@ -125,78 +188,146 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-9 h-9 bg-blue-800 text-white"
+              class="w-9 h-9 bg-blue-800 text-white laptop:hidden dark:bg-indigo-400 dark:text-black"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                class=""
               />
             </svg>
           </div>
           <nav
             id="nav-menu"
-            class="hidden transition-all duration-700 ease-in-out"
+            class="hidden laptop:flex transition-all duration-700 ease-in-out laptop:text-sm justify-center"
           >
-            <ul class="uppercase">
-              <li class="font-semibold">
-                <a href="" class="hover:text-yellow-300"> Logo </a>
+            <ul
+              class="uppercase laptop:gap-5 laptop:flex laptop:flex-wrap laptop:p-0 justify-evenly"
+            >
+              <li class="font-semibold hidden laptop:flex">
+                <a
+                  href=""
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                >
+                  Home
+                </a>
               </li>
-              <li class="font-semibold pt-3 pt-3">
-                <a href="" class="hover:text-yellow-300">
+              <li class="font-semibold">
+                <a
+                  href=""
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                >
+                  Logo
+                </a>
+              </li>
+              <li class="font-semibold laptop:p-0 pt-3">
+                <a
+                  href=""
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                >
                   Pusat Pelatihan Dan Bursa Karier
                 </a>
               </li>
-              <li class="font-semibold pt-3">
-                <a href="" class="hover:text-yellow-300"> Program Studi </a>
+              <li
+                id="dropdown-content"
+                class="font-semibold laptop:p-0 pt-3 laptop:relative"
+              >
+                <a
+                  href="#"
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                  id="dropdown-toggle"
+                  >Program Studi</a
+                >
+                <div
+                  id="dropdown-menu"
+                  class="text-sky-500 dark:text-blue-500 laptop:absolute laptop:z-10 laptop:top-full laptop:w-40 laptop:left-0 laptop:bg-gray-800 laptop:text-white laptop:border-t-4 laptop:border-yellow-300 laptop:shadow-lg p-4 laptop:p-0 laptop:dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 laptop:rounded-b-md"
+                >
+                  <ul
+                    class="space-y-2 capitalize laptop:text-xs laptop:grid laptop:text-slate-400 laptop:gap-3 laptop:p-4"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Teknik Informatika</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Sistem Informasi</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Desain Komunikasi Visual</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Perencanaan Wilayah Dan Kota</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Bisnis Digital</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Pariwisata</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Komputerisasi Akuntansi</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="hover:text-yellow-300 dark:hover:hover:text-teal-400 laptop:hover:text-white"
+                        >Manajemen Informatika</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300">Teknik Informatika </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300">Sistem Informasi </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300"
-                  >Desain Komunikasi Visual
-                </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300"
-                  >Perencanaan Wilayah Dan Kota
-                </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300">Bisnis Digital </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300">Pariwisata </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300"
-                  >Komputerisasi Akuntansi
-                </a>
-              </li>
-              <li class="ml-8 pl-4 capitalize font-semibold pt-3 text-sky-500">
-                <a href="" class="hover:text-yellow-300"
-                  >Manajemen Informatika
-                </a>
-              </li>
-              <li class="font-semibold pt-3">
-                <a href="" class="hover:text-yellow-300">
-                  Manajemen Informatika
-                </a>
-              </li>
-              <li class="font-semibold pt-3">
-                <a href="" class="hover:text-yellow-300">
+              <li class="font-semibold laptop:p-0 pt-3">
+                <a
+                  href=""
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                >
                   Pendaftaran Online
                 </a>
               </li>
-              <li class="font-semibold pt-3">
-                <a href="" class="hover:text-yellow-300"> Siakad Online </a>
+              <li class="font-semibold laptop:p-0 pt-3">
+                <a
+                  href=""
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                >
+                  Siakad Online
+                </a>
               </li>
-              <li class="font-semibold pt-3">
-                <a href="" class="hover:text-yellow-300"> Kontak </a>
+              <li class="font-semibold laptop:p-0 pt-3">
+                <a
+                  href=""
+                  class="hover:text-yellow-300 dark:hover:hover:text-teal-400"
+                >
+                  Kontak
+                </a>
               </li>
             </ul>
           </nav>
@@ -204,488 +335,502 @@
       </div>
     </section>
     <!-- Section hamburger meu end -->
-
-    <div class="">
-      <div class="tablet:grid tablet:grid-cols-2">
-        <div class="tablet:col-start-2 tablet:row-start-1 laptop:col-auto">
-          <!-- Section menu start -->
-          <section class="pt-4">
-            <div class="container px-2">
-              <div
-                class="w-full px-4 self-center bg-blue-800 rounded-lg shadow-lg border-t-8 border-orange-500"
-              >
-                <h2
-                  class="uppercase text-lg font-semibold py-4 text-yellow-500"
+    <div
+      class="dark:bg-gradient-to-tr from-slate-700 via-slate-900 to-slate-800 dark:text-white"
+    >
+      <div class="larg:container larg:max-w-[1200px] larg:px-10">
+        <div class="tablet:flex tablet:gap-3">
+          <div class="tablet:order-1 laptop:-order-1 tablet:w-[250px]">
+            <!-- Section menu start -->
+            <section class="pt-4">
+              <div class="container px-2">
+                <div
+                  class="w-full px-4 self-center bg-blue-800 rounded-lg dark:shadow-md dark:shadow-slate-500 shadow-lg border-t-8 border-orange-500 dark:bg-gradient-to-tl from-indigo-700 via-slate-800 to-slate-700"
                 >
-                  Menu
-                </h2>
-                <div class="pb-4">
-                  <ul>
-                    <li class="pb-1">
-                      <a href="#" class="uppercase menu-items">
-                        <span class="font-semibold font-2xl">></span> Mengapa
-                        Saya Memilih ITB Stikom Ambon ?</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Kampus ITB
-                        STIKOM</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span>
-                        Pendaftaran Online</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> PMB
-                        Administrasi</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Siakad
-                        Mahasiswa</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Download
-                        Mobile App</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> E-Learning
-                        (LMS)</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Pelatihan
-                        & Bursa Karir</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Dosen</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Jurnal &
-                        Publikasi</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span>
-                        Perpustakaan Online</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Fasilitas
-                        Kampus</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span>
-                        Laboratorium</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Unit
-                        Kegiatan Mahasiswa</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span> Kalender
-                        Akademik</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        <span class="font-semibold font-2xl">></span>
-                        Download</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Section menu end -->
-
-          <!-- section tautan utama start -->
-          <section class="pt-5">
-            <div class="container px-2">
-              <div
-                class="w-full px-4 self-center bg-slate-600 rounded-lg shadow-lg border-t-8 border-orange-500"
-              >
-                <h2
-                  class="uppercase text-lg font-semibold py-4 text-yellow-500"
-                >
-                  Tautan Utama
-                </h2>
-                <div class="pb-4">
-                  <ul>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        Pusat Pelatihan & Bursa Karir</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> Stikom Ambon</a>
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        Mengapa saya memilih ITB STIKOM ?</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        Stikom Ambon @ Facebook</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> STIKOM @ YouTube (new)</a>
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items">
-                        Stikom Ambon @ Instagram</a
-                      >
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> Stikom Ambon @ Twitter</a>
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> LLDIKTI Wil XII Ambon</a>
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> PDDIKTI</a>
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> PDDIKTI II</a>
-                    </li>
-                    <li class="pb-1">
-                      <a href="#" class="menu-items"> PDDIKTI III</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- section tautan utama end -->
-
-          <!-- section mini gakery start -->
-          <div class="section pt-5 mb-5">
-            <div class="container px-4">
-              <div class="w-full bg-white rounded-lg pt-3 px-3">
-                <div class="group grid-cards">
-                  <div
-                    class="grid-cards-img bg-[url('https://stikomambon.ac.id/beta/wp-content/uploads/IMG_9815-1.jpg')]"
-                  ></div>
-                </div>
-                <a
-                  href="#"
-                  class="px-2 py-4 text-sky-800 font-semibold hover:text-red-700 block"
-                >
-                  Aksi Peduli covid-19 (Stikom Ambon Bagi-bagi Masker untuk
-                  Masyarakat Kota Ambon)
-                </a>
-                <div class="pt-6 border-t-2"></div>
-                <div class="group grid-cards">
-                  <div
-                    class="grid-cards-img bg-[url('https://stikomambon.ac.id/beta/wp-content/uploads/DSC_5731.jpg')]"
-                  ></div>
-                </div>
-                <a
-                  href="#"
-                  class="px-2 py-4 text-sky-800 font-semibold hover:text-red-700 block"
-                  >Wisuda STIKOM Ambon Angkatan IV T.A. 2019/2020</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- section mini gakery end -->
-
-          <!-- section social card mini start -->
-          <div class="section pt-3 mb-5">
-            <div class="container bg-white rounded-lg px-4">
-              <div class="w-full px-4 self-center">
-                <h2 class="text-sky-800 font-bold uppercase">Social</h2>
-                <a href="#" class="">
-                  <div
-                    class="flex flex-wrap text-sky-800 hover:text-red-800 mt-4"
+                  <h2
+                    class="uppercase text-lg font-semibold py-4 text-yellow-500 dark:text-indigo-200"
                   >
-                    <img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/facebook.png"
-                      alt="facebook"
-                      class="pr-3"
-                    />
-                    <div>Add Us On Facebook</div>
+                    Menu
+                  </h2>
+                  <div class="pb-4">
+                    <ul>
+                      <li class="pb-1">
+                        <a href="#" class="uppercase menu-items">
+                          <span class="font-semibold font-2xl">></span> Mengapa
+                          Saya Memilih ITB Stikom Ambon ?</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Kampus
+                          ITB STIKOM</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          Pendaftaran Online</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> PMB
+                          Administrasi</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Siakad
+                          Mahasiswa</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Download
+                          Mobile App</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          E-Learning (LMS)</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          Pelatihan & Bursa Karir</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Dosen</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Jurnal &
+                          Publikasi</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          Perpustakaan Online</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          Fasilitas Kampus</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          Laboratorium</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Unit
+                          Kegiatan Mahasiswa</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span> Kalender
+                          Akademik</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          <span class="font-semibold font-2xl">></span>
+                          Download</a
+                        >
+                      </li>
+                    </ul>
                   </div>
-                </a>
-                <a href="#">
-                  <div
-                    class="flex flex-wrap text-sky-800 hover:text-red-800 mt-3"
-                  >
-                    <img
-                      src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/twitter.png"
-                      alt="facebook"
-                      class="pr-3"
-                    />
-                    <div>Add Us On Facebook</div>
-                  </div>
-                </a>
-                <!-- <div class="flex flex-wrap mt-3">
-            <img
-              src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/twitter.png"
-              alt="twitter"
-              class="pr-3"
-            />
-            <div class="">
-              <a href="" class="text-sky-800 hover:text-red-800"
-                >Follow Us On twitter</a
-              >
-            </div>
-          </div> -->
+                </div>
               </div>
-            </div>
+            </section>
+            <!-- Section menu end -->
+
+            <!-- section tautan utama start -->
+            <section class="pt-5">
+              <div class="container px-2">
+                <div
+                  class="w-full px-4 self-center bg-slate-600 rounded-lg shadow-lg border-t-8 border-orange-500 dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 dark:shadow-md dark:shadow-slate-500"
+                >
+                  <h2
+                    class="uppercase text-lg font-semibold py-4 text-yellow-500 dark:text-indigo-200"
+                  >
+                    Tautan Utama
+                  </h2>
+                  <div class="pb-4">
+                    <ul>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          Pusat Pelatihan & Bursa Karir</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items"> Stikom Ambon</a>
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          Mengapa saya memilih ITB STIKOM ?</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          Stikom Ambon @ Facebook</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          STIKOM @ YouTube (new)</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          Stikom Ambon @ Instagram</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          Stikom Ambon @ Twitter</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items">
+                          LLDIKTI Wil XII Ambon</a
+                        >
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items"> PDDIKTI</a>
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items"> PDDIKTI II</a>
+                      </li>
+                      <li class="pb-1">
+                        <a href="#" class="menu-items"> PDDIKTI III</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- section tautan utama end -->
+
+            <!-- section mini gakery start -->
+            <section class="pt-5 mb-5">
+              <div class="container px-2">
+                <div
+                  class="w-full bg-white rounded-lg pt-3 px-3 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
+                >
+                  <div class="group grid-cards">
+                    <div
+                      class="grid-cards-img bg-[url('https://stikomambon.ac.id/beta/wp-content/uploads/IMG_9815-1.jpg')]"
+                    ></div>
+                  </div>
+                  <a
+                    href="#"
+                    class="px-2 py-4 text-sky-800 font-semibold dark:hover:text-teal-400 hover:text-red-700 block dark:text-slate-300"
+                  >
+                    Aksi Peduli covid-19 (Stikom Ambon Bagi-bagi Masker untuk
+                    Masyarakat Kota Ambon)
+                  </a>
+                  <div class="pt-6 border-t-2"></div>
+                  <div class="group grid-cards">
+                    <div
+                      class="grid-cards-img bg-[url('https://stikomambon.ac.id/beta/wp-content/uploads/DSC_5731.jpg')]"
+                    ></div>
+                  </div>
+                  <a
+                    href="#"
+                    class="px-2 py-4 text-sky-800 font-semibold hover:text-red-700 block dark:text-slate-300 dark:hover:text-teal-400"
+                    >Wisuda STIKOM Ambon Angkatan IV T.A. 2019/2020</a
+                  >
+                </div>
+              </div>
+            </section>
+            <!-- section mini gakery end -->
+
+            <!-- section social card mini start -->
+            <section class="pt-3 mb-5">
+              <div
+                class="container bg-white rounded-lg px-4 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
+              >
+                <div class="w-full px-4 self-center">
+                  <h2
+                    class="text-sky-800 font-bold uppercase dark:text-indigo-200"
+                  >
+                    Social
+                  </h2>
+                  <a href="#" class="">
+                    <div
+                      class="flex flex-wrap text-sky-800 hover:text-red-800 mt-4"
+                    >
+                      <img
+                        src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/facebook.png"
+                        alt="facebook"
+                        class="pr-3"
+                      />
+                      <div>Add Us On Facebook</div>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      class="flex flex-wrap text-sky-800 hover:text-red-800 mt-3"
+                    >
+                      <img
+                        src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/twitter.png"
+                        alt="facebook"
+                        class="pr-3"
+                      />
+                      <div>Add Us On Facebook</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- section social card mini end -->
           </div>
-          <!-- section social card mini end -->
-        </div>
-        <div class="">
-          <!-- section slider start -->
-          <section>
-            <div class="container">
-              <div class="w-full px-2">
-                <div>
+
+          <div class="flex-1">
+            <!-- section slider start -->
+            <section>
+              <div class="container">
+                <div class="w-full pt-4 px-2">
+                  <div class="w-full">
+                    <img
+                      src="https://source.unsplash.com/600x300?computer"
+                      alt=""
+                      class="rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- section slider end -->
+
+            <!-- section news start -->
+            <section class="pt-10">
+              <div
+                class="container py-4 rounded-sm dark:bg-gradient-to-tr from-slate-600 via-slate-800 to-slate-700"
+              >
+                <div class="grid grid-cols-2 gap-3 px-2">
+                  <div class="justify-self-start">
+                    <a
+                      href=""
+                      class="uppercase text-sky-800 font-bold hover:text-red-800"
+                      >News</a
+                    >
+                  </div>
+                  <div class="justify-self-end">
+                    <a href="" class="text-yellow-600 hover:text-red-900 block"
+                      >view more post</a
+                    >
+                  </div>
+                  <div class="h-full grid-rows-1">
+                    <span>
+                      <img
+                        src="https://stikomambon.ac.id/beta/wp-content/uploads/WhatsApp-Image-2022-01-21-at-16.47.32-2-1024x678.jpeg"
+                        alt="images"
+                        class="rounded-lg hover:opacity-60 hover:scale-90 transition ease-in-out duration-700 cursor-pointer"
+                      />
+                      <p class="text-sm text-slate-600 pt-3">01/22/2022</p>
+                      <a
+                        href=""
+                        class="pt-3 text-sky-800 font-bold hover:text-red-800 block"
+                      >
+                        Kegiatan Pelatihan dan Simulasi Pemadam Kebakaran
+                      </a>
+                      <p class="pt-3" class="pt-3">
+                        Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan &
+                        Bursa Karir pada tanggal 21/01/2022 dengan tema
+                        “Pelatihan dan Simulasi Pemadam Kebakaran”. Kegiatan ini
+                        langsung dipraktekan bersama
+                      </p>
+                    </span>
+                  </div>
+                  <div class="h-full grid-rows-3">
+                    <div>
+                      <span>
+                        <a
+                          href=""
+                          class="text-sky-800 font-bold hover:text-red-800 block"
+                          >Kegiatan Pelatihan Pembuatan Website</a
+                        >
+                        <p class="pt-3">
+                          Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan
+                          & Bursa Karir pada tanggal 15/01/2022 dengan tema
+                          “Pelatihan Pembuatan Website
+                        </p>
+                      </span>
+                    </div>
+                    <div class="pt-3">
+                      <span class="border-t-2 block">
+                        <a
+                          href=""
+                          class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
+                          >Kegiatan Pelatihan Merakit dan Menginstal
+                          PC/Komputer</a
+                        >
+                        <p class="pt-3">
+                          Kegiatan Pelatihan yang diadakan oleh Pusat Pelatihan
+                          & Bursa Karir pada tanggal 18/12/2021 dengan tema
+                          “Merakit dan Menginstal PC/Komputer”
+                        </p>
+                      </span>
+                    </div>
+                    <div class="pt-3">
+                      <span class="border-t-2 block">
+                        <a
+                          href=""
+                          class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
+                          >Kegiatan Pelatihan Pembuatan CV</a
+                        >
+                        <p class="pt-3">
+                          Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan
+                          & Bursa Karir pada tanggal 03/12/2021 hingga
+                          04/12/2021 dengan tema “Pelatihan Pembuatan CV”
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- section news end -->
+
+            <!-- section galery start -->
+            <section class="pt-10">
+              <div class="container">
+                <div class="flex flex-wrap">
+                  <div class="w-full px-4">
+                    <h2 class="text-sky-800 font-bold uppercase">Galery</h2>
+                    <div class="flex pt-3">
+                      <div class="pr-3">
+                        <img
+                          src="https://source.unsplash.com/100x50?computer"
+                          alt=""
+                          class="block rounded-sm"
+                        />
+                      </div>
+                      <div class="pr-3">
+                        <img
+                          src="https://source.unsplash.com/100x50?computer"
+                          alt=""
+                          class="block rounded-sm"
+                        />
+                      </div>
+                      <div class="pr-3">
+                        <img
+                          src="https://source.unsplash.com/100x50?computer"
+                          alt=""
+                          class="block rounded-sm"
+                        />
+                      </div>
+                      <div class="pr-3">
+                        <img
+                          src="https://source.unsplash.com/100x50?computer"
+                          alt=""
+                          class="block rounded-sm"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- section galery end -->
+
+            <!-- section aktivitas kampus start -->
+            <section class="pt-10">
+              <div class="container px-2">
+                <div
+                  class="w-full px-4 self-center bg-blue-800 rounded-t-lg shadow-lg border-t-8 border-yellow-400 pb-6 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
+                >
+                  <h2 class="uppercase text-lg font-semibold py-4 text-white">
+                    Aktivitas Kampus
+                  </h2>
+                </div>
+              </div>
+            </section>
+            <!-- section aktivitas kampus end -->
+
+            <!-- section like us facebook start -->
+            <section class="pt-8 mb-5">
+              <div
+                class="bg-white rounded-lg px-4 flex flex-wrap dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700"
+              >
+                <div class="w-full px-4 self-center">
+                  <div
+                    class="w-48 aspect-[4/3] bg-black overflow-hidden relative"
+                  >
+                    <div
+                      class="w-full h-full absolute bg-cover bg-repeat bg-[url('https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/294932061_470169131781620_4511270315515238208_n.jpg?stp=dst-jpg_p130x130&_nc_cat=102&ccb=1-7&_nc_sid=dd9801&_nc_eui2=AeG55lO8k2LmBkOgJfHUMIfTOQpFeb0YNjA5CkV5vRg2MDK0EvoQvBNrEBIJSbGC4m74E2bntj8ugT-Gp5RigGYA&_nc_ohc=E8He_5pK_-AAX98oeUe&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfA-7-XQkZqHsZOG5E3ArkoU0BcLuyqsM-YJHNbJYZMiVw&oe=642D99E9')]"
+                    >
+                      <div>
+                        <img
+                          src="https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-1/289078873_470169128448287_2784303130922961775_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=106&ccb=1-7&_nc_sid=dbb9e7&_nc_eui2=AeHO5QVTgaKJmT5M1Z9H-IYfWDCgu9QED-1YMKC71AQP7cSYx9HWSd-KZaagV1OIJWmgV6FSBEf_ObuSzBzKVZL8&_nc_ohc=WY3oirsqgksAX9tGXaF&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfBxrFiqr2sxyHC6yk8NyJrVfHO38JuVh8wtGeRZ-H94gA&oe=642CFFC4"
+                          alt=""
+                        />
+                      </div>
+                      <span>
+                        <button class="bg-white w-1/2 h-8">Followed</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- section like us facebook end -->
+
+            <!-- section pembuatan email start -->
+            <section class="pt-3 mb-5">
+              <div
+                class="bg-white rounded-lg px-4 dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700"
+              >
+                <div class="w-full px-4 self-center">
                   <img
-                    src="https://source.unsplash.com/600x300?computer"
+                    src="http://stikomambon.ac.id/beta/wp-content/uploads/2013/07/email.jpg"
                     alt=""
-                    class="rounded-lg"
                   />
                 </div>
               </div>
-            </div>
-          </section>
-          <!-- section slider end -->
-
-          <!-- section news start -->
-          <section class="pt-10">
-            <div class="container">
-              <div class="grid grid-cols-2 gap-3 px-2">
-                <div class="justify-self-start">
-                  <a
-                    href=""
-                    class="uppercase text-sky-800 font-bold hover:text-red-800"
-                    >News</a
-                  >
-                </div>
-                <div class="justify-self-end">
-                  <a href="" class="text-yellow-600 hover:text-red-900 block"
-                    >view more post</a
-                  >
-                </div>
-                <div class="h-full grid-rows-1">
-                  <span>
-                    <img
-                      src="https://stikomambon.ac.id/beta/wp-content/uploads/WhatsApp-Image-2022-01-21-at-16.47.32-2-1024x678.jpeg"
-                      alt="images"
-                      class="rounded-lg hover:opacity-60 hover:scale-110 transition ease-in-out duration-700"
-                    />
-                    <p class="text-sm text-slate-600 pt-3">01/22/2022</p>
-                    <a
-                      href=""
-                      class="pt-3 text-sky-800 font-bold hover:text-red-800 block"
-                    >
-                      Kegiatan Pelatihan dan Simulasi Pemadam Kebakaran
-                    </a>
-                    <p class="pt-3" class="pt-3">
-                      Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan &
-                      Bursa Karir pada tanggal 21/01/2022 dengan tema “Pelatihan
-                      dan Simulasi Pemadam Kebakaran”. Kegiatan ini langsung
-                      dipraktekan bersama
-                    </p>
-                  </span>
-                </div>
-                <div class="h-full grid-rows-3">
-                  <div>
-                    <span>
-                      <a
-                        href=""
-                        class="text-sky-800 font-bold hover:text-red-800 block"
-                        >Kegiatan Pelatihan Pembuatan Website</a
-                      >
-                      <p class="pt-3">
-                        Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan &
-                        Bursa Karir pada tanggal 15/01/2022 dengan tema
-                        “Pelatihan Pembuatan Website
-                      </p>
-                    </span>
-                  </div>
-                  <div class="pt-3">
-                    <span class="border-t-2 block">
-                      <a
-                        href=""
-                        class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
-                        >Kegiatan Pelatihan Merakit dan Menginstal
-                        PC/Komputer</a
-                      >
-                      <p class="pt-3">
-                        Kegiatan Pelatihan yang diadakan oleh Pusat Pelatihan &
-                        Bursa Karir pada tanggal 18/12/2021 dengan tema “Merakit
-                        dan Menginstal PC/Komputer”
-                      </p>
-                    </span>
-                  </div>
-                  <div class="pt-3">
-                    <span class="border-t-2 block">
-                      <a
-                        href=""
-                        class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
-                        >Kegiatan Pelatihan Pembuatan CV</a
-                      >
-                      <p class="pt-3">
-                        Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan &
-                        Bursa Karir pada tanggal 03/12/2021 hingga 04/12/2021
-                        dengan tema “Pelatihan Pembuatan CV”
-                      </p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- section news end -->
-
-          <!-- section galery start -->
-          <section class="pt-10">
-            <div class="container">
-              <div class="flex flex-wrap">
-                <div class="w-full px-4">
-                  <h2 class="text-sky-800 font-bold uppercase">Galery</h2>
-                  <div class="flex pt-3">
-                    <div class="pr-3">
-                      <img
-                        src="https://source.unsplash.com/100x50?computer"
-                        alt=""
-                        class="block rounded-sm"
-                      />
-                    </div>
-                    <div class="pr-3">
-                      <img
-                        src="https://source.unsplash.com/100x50?computer"
-                        alt=""
-                        class="block rounded-sm"
-                      />
-                    </div>
-                    <div class="pr-3">
-                      <img
-                        src="https://source.unsplash.com/100x50?computer"
-                        alt=""
-                        class="block rounded-sm"
-                      />
-                    </div>
-                    <div class="pr-3">
-                      <img
-                        src="https://source.unsplash.com/100x50?computer"
-                        alt=""
-                        class="block rounded-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- section galery end -->
-
-          <!-- section aktivitas kampus start -->
-          <section class="pt-10">
-            <div class="container px-2">
-              <div
-                class="w-full px-4 self-center bg-blue-800 rounded-t-lg shadow-lg border-t-8 border-yellow-400 pb-6"
-              >
-                <h2 class="uppercase text-lg font-semibold py-4 text-white">
-                  Aktivitas Kampus
-                </h2>
-              </div>
-            </div>
-          </section>
-          <!-- section aktivitas kampus end -->
-
-          <!-- section like us facebook start -->
-          <section class="pt-8 mb-5">
-            <div class="container bg-white rounded-lg px-4 flex flex-wrap">
-              <div class="w-full px-4 self-center">
-                <div
-                  class="w-48 aspect-[4/3] bg-black overflow-hidden relative"
-                >
-                  <div
-                    class="w-full h-full absolute bg-cover bg-repeat bg-[url('https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/294932061_470169131781620_4511270315515238208_n.jpg?stp=dst-jpg_p130x130&_nc_cat=102&ccb=1-7&_nc_sid=dd9801&_nc_eui2=AeG55lO8k2LmBkOgJfHUMIfTOQpFeb0YNjA5CkV5vRg2MDK0EvoQvBNrEBIJSbGC4m74E2bntj8ugT-Gp5RigGYA&_nc_ohc=E8He_5pK_-AAX98oeUe&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfA-7-XQkZqHsZOG5E3ArkoU0BcLuyqsM-YJHNbJYZMiVw&oe=642D99E9')]"
-                  >
-                    <div>
-                      <img
-                        src="https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-1/289078873_470169128448287_2784303130922961775_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=106&ccb=1-7&_nc_sid=dbb9e7&_nc_eui2=AeHO5QVTgaKJmT5M1Z9H-IYfWDCgu9QED-1YMKC71AQP7cSYx9HWSd-KZaagV1OIJWmgV6FSBEf_ObuSzBzKVZL8&_nc_ohc=WY3oirsqgksAX9tGXaF&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfBxrFiqr2sxyHC6yk8NyJrVfHO38JuVh8wtGeRZ-H94gA&oe=642CFFC4"
-                        alt=""
-                      />
-                    </div>
-                    <span>
-                      <button class="bg-white w-1/2 h-8">Followed</button>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- section like us facebook end -->
-
-          <!-- section pembuatan email start -->
-          <section class="pt-3 mb-5">
-            <div class="container bg-white rounded-lg px-4">
-              <div class="w-full px-4 self-center">
-                <img
-                  src="http://stikomambon.ac.id/beta/wp-content/uploads/2013/07/email.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </section>
-          <!-- section pembuatan email end -->
+            </section>
+            <!-- section pembuatan email end -->
+          </div>
         </div>
       </div>
-
-      <!-- section footer start  -->
-      <section class="bg-slate-300 px-10 border-t-8 border-red-600">
-        <div class="container">
-          <div class="w-full flex flex-wrap pt-5 pb-60 tablet:w-1/2">
-            <h3 class="font-bold uppercase text-slate-800">ABOUT STIKOM</h3>
-            <p class="pt-3 pb-14">
-              <b>Sekolah Tinggi Ilmu Komputer Ambon</b> lahir sebagai perwujudan
-              komitmen Yayasan Ilmu Teknologi Komputer Indonesia Ambon untuk
-              membangun masyarakat well informed. Komputer sebagai piranti utama
-              tekhnologi informasi dan komunikasi menjadi penting dikuasai,
-              dimanfaatkan dan dikembangkan.
-            </p>
-            <a href="">Read More</a>
-          </div>
-
-          <div class="w-full flex flex-wrap pt-5">
-            <h3 class="font-bold uppercase text-slate-800">Post Terbaru</h3>
-          </div>
-        </div>
-      </section>
-      <!-- section footer end -->
     </div>
+
+    <!-- section footer start  -->
+    <section
+      class="bg-slate-300 px-10 border-t-8 border-red-600 dark:bg-gradient-to-tl from-indigo-400 via-slate-400 to-slate-400"
+    >
+      <div class="container">
+        <div class="w-full flex flex-wrap pt-5 pb-60 tablet:w-1/2">
+          <h3 class="font-bold uppercase text-slate-800">ABOUT STIKOM</h3>
+          <p class="pt-3 pb-14">
+            <b>Sekolah Tinggi Ilmu Komputer Ambon</b> lahir sebagai perwujudan
+            komitmen Yayasan Ilmu Teknologi Komputer Indonesia Ambon untuk
+            membangun masyarakat well informed. Komputer sebagai piranti utama
+            tekhnologi informasi dan komunikasi menjadi penting dikuasai,
+            dimanfaatkan dan dikembangkan.
+          </p>
+          <a href="">Read More</a>
+        </div>
+
+        <div class="w-full flex flex-wrap pt-5">
+          <h3 class="font-bold uppercase text-slate-800">Post Terbaru</h3>
+        </div>
+      </div>
+    </section>
+    <!-- section footer end -->
 
     <script src="src/js/script.js"></script>
   </body>

@@ -4,7 +4,7 @@
 
 @layer base {
   .menu-items {
-    @apply font-semibold text-sm text-white hover:text-yellow-300;
+    @apply font-semibold text-sm text-white hover:text-yellow-300 dark:text-slate-300 dark:hover:text-teal-400;
   }
 }
 
@@ -16,4 +16,10 @@
 
 .grid-cards-img {
   @apply w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all group-hover:opacity-70 duration-500 group-hover:rotate-12;
+}
+
+@layer utilities {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
+  }
 }
