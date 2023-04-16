@@ -36,29 +36,6 @@ dropdownContent.addEventListener("mouseleave", () => {
   }
 });
 
-// toggle mode dark and white
-// const checkbox = document.querySelector("#toggle");
-// const html = document.querySelector("html");
-
-// checkbox.addEventListener("click", function () {
-//   checkbox.click ? html.classList.add("dark") : html.classList.remove("dark");
-//   if (checkbox.click) {
-//     localStorage.theme = "dark";
-//   } else {
-//     localStorage.theme = "light";
-//   }
-// });
-
-// // pindahkan posisi toggle sesuia mode
-// if (
-//   localStorage.theme === "dark" ||
-//   (!("theme" in localStorage) &&
-//     window.matchMedia("(prefers-color-scheme: dark)").matches)
-// ) {
-//   checkbox.checked = true;
-// } else {
-//   checkbox.checked = false;
-// }
 
 const checkbox = document.querySelector("#toggle");
 const html = document.querySelector("html");

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website TailwindCSS</title>
     <link rel="stylesheet" href="public/css/final.css" />
+    <link
+      rel="shortcut icon"
+      href="src/img/logostikom.png"
+      type="image/x-icon"
+    />
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -30,11 +35,7 @@
           <div class="w-full m-auto text-center">
             <div class="items-center justify-center">
               <a href="">
-                <img
-                  src="https://stikomambon.ac.id/beta/wp-content/uploads/Untitled-1.jpg"
-                  alt=""
-                  class="m-auto"
-                />
+                <img src="src/img/logo.png" alt="" class="m-auto h-1/2 w-1/2" />
               </a>
             </div>
             <h1 class="italic dark:text-white text-slate-500">
@@ -94,8 +95,8 @@
                         src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/feed_small.png"
                         alt=""
                     /></a>
-                    <div>Theme</div>
-                    <div id="toggle" class="flex">
+                    <div>Theme :</div>
+                    <div id="toggle" class="flex justify-center items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -116,7 +117,7 @@
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="currentColor"
-                        class="w-6 h-6 cursor-pointer hidden"
+                        class="w-5 h-5 cursor-pointer hidden"
                       >
                         <path
                           stroke-linecap="round"
@@ -144,7 +145,7 @@
                   placeholder="Search"
                 />
                 <button
-                  class="px-6 tablet:px-2 py-1 bg-red-500 text-white border hover:bg-red-600 rounded-tr-md rounded-br-md"
+                  class="px-6 tablet:px-2 py-1 bg-red-500 text-white border hover:bg-red-600 rounded-tr-md rounded-br-md dark:bg-gradient-to-tr from-red-900 via-red-600 to-red-400"
                 >
                   Search
                 </button>
@@ -171,7 +172,7 @@
           >
             <h1
               id="home"
-              class="hidden font-semibold uppercase laptop:hidden text-yellow-500"
+              class="hidden font-semibold uppercase laptop:hidden text-yellow-500 dark:text-indigo-200 mr-auto"
             >
               Home
             </h1>
@@ -329,16 +330,16 @@
     </section>
     <!-- Section hamburger meu end -->
     <div
-      class="dark:bg-gradient-to-tr from-slate-700 via-slate-900 to-slate-800 dark:text-white"
+      class="dark:bg-gradient-to-tr bg-slate-100 from-slate-700 via-slate-900 to-slate-800 dark:text-white"
     >
-      <div class="larg:container larg:max-w-[1200px] larg:px-10">
+      <div class="larg:container px-2 larg:max-w-[1200px] larg:px-10">
         <div class="tablet:flex tablet:gap-3">
-          <div class="tablet:order-1 laptop:-order-1 tablet:w-[250px]">
+          <div class="tablet:order-1 laptop:-order-1 tablet:w-[230px]">
             <!-- Section menu start -->
             <section class="pt-4">
-              <div class="container px-2">
+              <div class=" ">
                 <div
-                  class="w-full px-4 self-center bg-blue-800 rounded-lg dark:shadow-md dark:shadow-slate-500 shadow-lg border-t-8 border-orange-500 dark:bg-gradient-to-tl from-indigo-700 via-slate-800 to-slate-700"
+                  class="w-full px-4 self-center bg-blue-800 rounded-md dark:shadow-md dark:shadow-slate-500 shadow-lg border-t-8 border-orange-500 dark:bg-gradient-to-tl from-indigo-700 via-slate-800 to-slate-700"
                 >
                   <h2
                     class="uppercase text-lg font-semibold py-4 text-yellow-500 dark:text-indigo-200"
@@ -451,9 +452,9 @@
 
             <!-- section tautan utama start -->
             <section class="pt-5">
-              <div class="container px-2">
+              <div class=" ">
                 <div
-                  class="w-full px-4 self-center bg-slate-600 rounded-lg shadow-lg border-t-8 border-orange-500 dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 dark:shadow-md dark:shadow-slate-500"
+                  class="w-full px-4 self-center bg-slate-600 rounded-md shadow-lg border-t-8 border-orange-500 dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 dark:shadow-md dark:shadow-slate-500"
                 >
                   <h2
                     class="uppercase text-lg font-semibold py-4 text-yellow-500 dark:text-indigo-200"
@@ -518,9 +519,9 @@
 
             <!-- section mini gakery start -->
             <section class="pt-5 mb-5">
-              <div class="container px-2">
+              <div class="">
                 <div
-                  class="w-full bg-white rounded-lg pt-3 px-3 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
+                  class="w-full bg-white rounded-md pt-3 px-3 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
                 >
                   <div class="group grid-cards">
                     <div
@@ -551,9 +552,9 @@
             <!-- section mini gakery end -->
 
             <!-- section social card mini start -->
-            <section class="pt-3 mb-5">
+            <section class="mb-5">
               <div
-                class="container bg-white rounded-lg px-4 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
+                class="bg-white rounded-md py-4 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
               >
                 <div class="w-full px-4 self-center">
                   <h2
@@ -563,7 +564,7 @@
                   </h2>
                   <a href="#" class="">
                     <div
-                      class="flex flex-wrap text-sky-800 hover:text-red-800 mt-4"
+                      class="flex flex-wrap dark:hover:text-teal-400 dark:text-white text-sky-800 hover:text-red-800 mt-4"
                     >
                       <img
                         src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/facebook.png"
@@ -575,7 +576,7 @@
                   </a>
                   <a href="#">
                     <div
-                      class="flex flex-wrap text-sky-800 hover:text-red-800 mt-3"
+                      class="flex flex-wrap dark:hover:text-teal-400 dark:text-white text-sky-800 hover:text-red-800 mt-3"
                     >
                       <img
                         src="https://stikomambon.ac.id/beta/wp-content/themes/academica_pro/images/social/twitter.png"
@@ -594,8 +595,8 @@
           <div class="flex-1">
             <!-- section slider start -->
             <section>
-              <div class="container">
-                <div class="w-full pt-4 px-2">
+              <div class="">
+                <div class="w-full pt-4">
                   <div class="w-full">
                     <img
                       src="https://source.unsplash.com/600x300?computer"
@@ -608,207 +609,229 @@
             </section>
             <!-- section slider end -->
 
-            <!-- section news start -->
-            <section class="pt-10">
-              <div
-                class="container py-4 rounded-sm dark:bg-gradient-to-tr from-slate-600 via-slate-800 to-slate-700"
-              >
-                <div class="grid grid-cols-2 gap-3 px-2">
-                  <div class="justify-self-start">
-                    <a
-                      href=""
-                      class="uppercase text-sky-800 font-bold hover:text-red-800"
-                      >News</a
-                    >
-                  </div>
-                  <div class="justify-self-end">
-                    <a href="" class="text-yellow-600 hover:text-red-900 block"
-                      >view more post</a
-                    >
-                  </div>
-                  <div class="h-full grid-rows-1">
-                    <span>
-                      <img
-                        src="https://stikomambon.ac.id/beta/wp-content/uploads/WhatsApp-Image-2022-01-21-at-16.47.32-2-1024x678.jpeg"
-                        alt="images"
-                        class="rounded-lg hover:opacity-60 hover:scale-90 transition ease-in-out duration-700 cursor-pointer"
-                      />
-                      <p class="text-sm text-slate-600 pt-3">01/22/2022</p>
-                      <a
-                        href=""
-                        class="pt-3 text-sky-800 font-bold hover:text-red-800 block"
-                      >
-                        Kegiatan Pelatihan dan Simulasi Pemadam Kebakaran
-                      </a>
-                      <p class="pt-3" class="pt-3">
-                        Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan &
-                        Bursa Karir pada tanggal 21/01/2022 dengan tema
-                        “Pelatihan dan Simulasi Pemadam Kebakaran”. Kegiatan ini
-                        langsung dipraktekan bersama
-                      </p>
-                    </span>
-                  </div>
-                  <div class="h-full grid-rows-3">
-                    <div>
-                      <span>
-                        <a
-                          href=""
-                          class="text-sky-800 font-bold hover:text-red-800 block"
-                          >Kegiatan Pelatihan Pembuatan Website</a
-                        >
-                        <p class="pt-3">
-                          Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan
-                          & Bursa Karir pada tanggal 15/01/2022 dengan tema
-                          “Pelatihan Pembuatan Website
-                        </p>
-                      </span>
-                    </div>
-                    <div class="pt-3">
-                      <span class="border-t-2 block">
-                        <a
-                          href=""
-                          class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
-                          >Kegiatan Pelatihan Merakit dan Menginstal
-                          PC/Komputer</a
-                        >
-                        <p class="pt-3">
-                          Kegiatan Pelatihan yang diadakan oleh Pusat Pelatihan
-                          & Bursa Karir pada tanggal 18/12/2021 dengan tema
-                          “Merakit dan Menginstal PC/Komputer”
-                        </p>
-                      </span>
-                    </div>
-                    <div class="pt-3">
-                      <span class="border-t-2 block">
-                        <a
-                          href=""
-                          class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
-                          >Kegiatan Pelatihan Pembuatan CV</a
-                        >
-                        <p class="pt-3">
-                          Kegiatan pelatihan yang diadakan oleh Pusat Pelatihan
-                          & Bursa Karir pada tanggal 03/12/2021 hingga
-                          04/12/2021 dengan tema “Pelatihan Pembuatan CV”
-                        </p>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- section news end -->
-
-            <!-- section galery start -->
-            <section class="pt-10">
-              <div class="container">
-                <div class="flex flex-wrap">
-                  <div class="w-full px-4">
-                    <h2 class="text-sky-800 font-bold uppercase">Galery</h2>
-                    <div class="flex pt-3">
-                      <div class="pr-3">
-                        <img
-                          src="https://source.unsplash.com/100x50?computer"
-                          alt=""
-                          class="block rounded-sm"
-                        />
-                      </div>
-                      <div class="pr-3">
-                        <img
-                          src="https://source.unsplash.com/100x50?computer"
-                          alt=""
-                          class="block rounded-sm"
-                        />
-                      </div>
-                      <div class="pr-3">
-                        <img
-                          src="https://source.unsplash.com/100x50?computer"
-                          alt=""
-                          class="block rounded-sm"
-                        />
-                      </div>
-                      <div class="pr-3">
-                        <img
-                          src="https://source.unsplash.com/100x50?computer"
-                          alt=""
-                          class="block rounded-sm"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- section galery end -->
-
-            <!-- section aktivitas kampus start -->
-            <section class="pt-10">
-              <div class="container px-2">
-                <div
-                  class="w-full px-4 self-center bg-blue-800 rounded-t-lg shadow-lg border-t-8 border-yellow-400 pb-6 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
-                >
-                  <h2 class="uppercase text-lg font-semibold py-4 text-white">
-                    Aktivitas Kampus
-                  </h2>
-                </div>
-              </div>
-            </section>
-            <!-- section aktivitas kampus end -->
-
-            <!-- section like us facebook start -->
-            <section class="pt-8 mb-5">
-              <div
-                class="bg-white rounded-lg px-4 flex flex-wrap dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700"
-              >
-                <div class="w-full px-4 self-center">
+            <!-- layout layar penuh start -->
+            <div class="laptop:flex laptop:gap-2">
+              <!-- col 1 -->
+              <div class="w-full">
+                <!-- section news start -->
+                <section class="pt-10 laptop:pt-4">
                   <div
-                    class="w-48 aspect-[4/3] bg-black overflow-hidden relative"
+                    class="py-4 px-2 rounded-sm bg-white dark:bg-gradient-to-tr from-slate-600 via-slate-800 to-slate-700"
                   >
-                    <div
-                      class="w-full h-full absolute bg-cover bg-repeat bg-[url('https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/294932061_470169131781620_4511270315515238208_n.jpg?stp=dst-jpg_p130x130&_nc_cat=102&ccb=1-7&_nc_sid=dd9801&_nc_eui2=AeG55lO8k2LmBkOgJfHUMIfTOQpFeb0YNjA5CkV5vRg2MDK0EvoQvBNrEBIJSbGC4m74E2bntj8ugT-Gp5RigGYA&_nc_ohc=E8He_5pK_-AAX98oeUe&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfA-7-XQkZqHsZOG5E3ArkoU0BcLuyqsM-YJHNbJYZMiVw&oe=642D99E9')]"
-                    >
-                      <div>
-                        <img
-                          src="https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-1/289078873_470169128448287_2784303130922961775_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=106&ccb=1-7&_nc_sid=dbb9e7&_nc_eui2=AeHO5QVTgaKJmT5M1Z9H-IYfWDCgu9QED-1YMKC71AQP7cSYx9HWSd-KZaagV1OIJWmgV6FSBEf_ObuSzBzKVZL8&_nc_ohc=WY3oirsqgksAX9tGXaF&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfBxrFiqr2sxyHC6yk8NyJrVfHO38JuVh8wtGeRZ-H94gA&oe=642CFFC4"
-                          alt=""
-                        />
+                    <div class="grid grid-cols-2 gap-3 px-2">
+                      <div class="justify-self-start">
+                        <a
+                          href=""
+                          class="uppercase text-sky-800 font-bold hover:text-red-800"
+                          >News</a
+                        >
                       </div>
-                      <span>
-                        <button class="bg-white w-1/2 h-8">Followed</button>
-                      </span>
+                      <div class="justify-self-end">
+                        <a
+                          href=""
+                          class="text-yellow-600 hover:text-red-900 block"
+                          >view more post</a
+                        >
+                      </div>
+                      <div class="h-full grid-rows-1">
+                        <span>
+                          <img
+                            src="https://stikomambon.ac.id/beta/wp-content/uploads/WhatsApp-Image-2022-01-21-at-16.47.32-2-1024x678.jpeg"
+                            alt="images"
+                            class="rounded-lg hover:opacity-60 hover:scale-90 transition ease-in-out duration-700 cursor-pointer"
+                          />
+                          <p class="text-sm text-slate-600 pt-3">01/22/2022</p>
+                          <a
+                            href=""
+                            class="pt-3 text-sky-800 font-bold hover:text-red-800 block"
+                          >
+                            Kegiatan Pelatihan dan Simulasi Pemadam Kebakaran
+                          </a>
+                          <p class="pt-3" class="pt-3">
+                            Kegiatan pelatihan yang diadakan oleh Pusat
+                            Pelatihan & Bursa Karir pada tanggal 21/01/2022
+                            dengan tema “Pelatihan dan Simulasi Pemadam
+                            Kebakaran”. Kegiatan ini langsung dipraktekan
+                            bersama
+                          </p>
+                        </span>
+                      </div>
+                      <div class="h-full grid-rows-3">
+                        <div>
+                          <span>
+                            <a
+                              href=""
+                              class="text-sky-800 font-bold hover:text-red-800 block"
+                              >Kegiatan Pelatihan Pembuatan Website</a
+                            >
+                            <p class="pt-3">
+                              Kegiatan pelatihan yang diadakan oleh Pusat
+                              Pelatihan & Bursa Karir pada tanggal 15/01/2022
+                              dengan tema “Pelatihan Pembuatan Website
+                            </p>
+                          </span>
+                        </div>
+                        <div class="pt-3">
+                          <span class="border-t-2 block">
+                            <a
+                              href=""
+                              class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
+                              >Kegiatan Pelatihan Merakit dan Menginstal
+                              PC/Komputer</a
+                            >
+                            <p class="pt-3">
+                              Kegiatan Pelatihan yang diadakan oleh Pusat
+                              Pelatihan & Bursa Karir pada tanggal 18/12/2021
+                              dengan tema “Merakit dan Menginstal PC/Komputer”
+                            </p>
+                          </span>
+                        </div>
+                        <div class="pt-3">
+                          <span class="border-t-2 block">
+                            <a
+                              href=""
+                              class="pt-2 text-sky-800 font-bold hover:text-red-800 block"
+                              >Kegiatan Pelatihan Pembuatan CV</a
+                            >
+                            <p class="pt-3">
+                              Kegiatan pelatihan yang diadakan oleh Pusat
+                              Pelatihan & Bursa Karir pada tanggal 03/12/2021
+                              hingga 04/12/2021 dengan tema “Pelatihan Pembuatan
+                              CV”
+                            </p>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </section>
-            <!-- section like us facebook end -->
+                </section>
+                <!-- section news end -->
 
-            <!-- section pembuatan email start -->
-            <section class="pt-3 pb-5">
-              <div
-                class="bg-white rounded-lg px-4 dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700"
-              >
-                <div class="w-full px-4 self-center">
-                  <img
-                    src="http://stikomambon.ac.id/beta/wp-content/uploads/2013/07/email.jpg"
-                    alt=""
-                  />
-                </div>
+                <!-- section galery start -->
+                <section class="pt-10">
+                  <div class="">
+                    <div class="flex flex-wrap dark:bg-gradient-to-tr from-slate-600 via-slate-800 to-slate-700 bg-white px-1.5 py-4 rounded-md">
+                      <div class="w-full px-4">
+                        <h2 class="text-sky-800 font-bold uppercase">Galery</h2>
+                        <div class="flex pt-3">
+                          <div class="pr-3">
+                            <img
+                              src="https://source.unsplash.com/100x50?computer"
+                              alt=""
+                              class="block rounded-sm"
+                            />
+                          </div>
+                          <div class="pr-3">
+                            <img
+                              src="https://source.unsplash.com/100x50?computer"
+                              alt=""
+                              class="block rounded-sm"
+                            />
+                          </div>
+                          <div class="pr-3">
+                            <img
+                              src="https://source.unsplash.com/100x50?computer"
+                              alt=""
+                              class="block rounded-sm"
+                            />
+                          </div>
+                          <div class="pr-3">
+                            <img
+                              src="https://source.unsplash.com/100x50?computer"
+                              alt=""
+                              class="block rounded-sm"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- section galery end -->
               </div>
-            </section>
-            <!-- section pembuatan email end -->
+
+              <!-- col 2 -->
+              <div class="laptop:w-[230px]">
+                <!-- section aktivitas kampus start -->
+                <section class="pt-10 laptop:pt-4">
+                  <div class="">
+                    <div
+                      class="w-full px-4 self-center bg-blue-800 rounded-t-md shadow-lg border-t-8 border-yellow-400 pb-6 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400"
+                    >
+                      <h2
+                        class="uppercase text-lg font-semibold py-4 text-white"
+                      >
+                        Aktivitas Kampus
+                      </h2>
+                    </div>
+                  </div>
+                </section>
+                <!-- section aktivitas kampus end -->
+
+                <!-- section like us facebook start -->
+                <section class="pt-8 mb-5">
+                  <div
+                    class="bg-white rounded-lg px-4 flex flex-wrap dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700"
+                  >
+                    <div class="w-full px-4 self-center">
+                      <div
+                        class="w-48 aspect-[4/3] bg-black overflow-hidden relative"
+                      >
+                        <div
+                          class="w-full h-full absolute bg-cover bg-repeat bg-[url('https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/294932061_470169131781620_4511270315515238208_n.jpg?stp=dst-jpg_p130x130&_nc_cat=102&ccb=1-7&_nc_sid=dd9801&_nc_eui2=AeG55lO8k2LmBkOgJfHUMIfTOQpFeb0YNjA5CkV5vRg2MDK0EvoQvBNrEBIJSbGC4m74E2bntj8ugT-Gp5RigGYA&_nc_ohc=E8He_5pK_-AAX98oeUe&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfA-7-XQkZqHsZOG5E3ArkoU0BcLuyqsM-YJHNbJYZMiVw&oe=642D99E9')]"
+                        >
+                          <div>
+                            <img
+                              src="https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/340763239_925905942054291_7858736047035733817_n.jpg?stp=dst-jpg_p130x130&_nc_cat=107&ccb=1-7&_nc_sid=dd9801&_nc_eui2=AeFjwlqZs9r1VEQmofm2xcwD8l4wR72KEpLyXjBHvYoSkjuJ2iJzsILL_CrHHpJY9O8-flhsfxR29PUwE_FaQQj6&_nc_ohc=w63mRaoBfckAX9j9tYQ&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfCRUJdkMSmgV-Q98Qv5-EtR13eDItTl7J2zu5NqQEGYIw&oe=643E98E0"
+                              alt=""
+                            />
+                          </div>
+                          <span>
+                            <button class="bg-white w-1/2 h-8">Followed</button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- section like us facebook end -->
+
+                <!-- section pembuatan email start -->
+                <section class="pt-3 pb-5">
+                  <div
+                    class="bg-white rounded-lg px-4 dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700"
+                  >
+                    <div class="w-full mx-auto px-4 self-center">
+                      <a
+                        href="
+                  "
+                      >
+                        <img
+                          src="http://stikomambon.ac.id/beta/wp-content/uploads/2013/07/email.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- section pembuatan email end -->
+              </div>
+            </div>
+            <!-- layout layar penuh end -->
           </div>
         </div>
       </div>
     </div>
 
     <!-- section footer start  -->
-    <section
-      class="bg-slate-300 px-10 border-t-8 border-red-600 dark:bg-gradient-to-tl from-indigo-400 via-slate-400 to-slate-400"
+
+    <div
+      class="w-full bg-slate-300 border-t-8 border-red-600 dark:bg-gradient-to-tl from-indigo-400 via-slate-400 to-slate-400 flex"
     >
-      <div class="container">
-        <div class="w-full flex flex-wrap pt-5 pb-60 tablet:w-1/2">
+      <div class="grid grid-cols-2 pl-1 laptop:container w-full">
+        <div class="w-full laptop:w-1/2 pt-5 pb-32 tablet:pb-0">
           <h3 class="font-bold uppercase text-slate-800">ABOUT STIKOM</h3>
-          <p class="pt-3 pb-14">
+          <p class="pt-3 pb-14 text-justify">
             <b>Sekolah Tinggi Ilmu Komputer Ambon</b> lahir sebagai perwujudan
             komitmen Yayasan Ilmu Teknologi Komputer Indonesia Ambon untuk
             membangun masyarakat well informed. Komputer sebagai piranti utama
@@ -818,11 +841,75 @@
           <a href="">Read More</a>
         </div>
 
-        <div class="w-full flex flex-wrap pt-5">
+        <div
+          class="w-full laptop:w-1/2 laptop:pt-5 col-start-1 row-start-3 tablet:col-start-2 tablet:row-start-2 laptop:col-auto laptop:row-auto"
+        >
           <h3 class="font-bold uppercase text-slate-800">Post Terbaru</h3>
+          <div class="grid gap-y-3 divide-blue-800 divide-y pl-1 pt-3 pb-52">
+            <div class="">
+              <h5 class="font-semibold">Alur Ujian Skripsi-TA Online</h5>
+              <p class="">
+                <span class="text-slate-500">10th September 2020 /</span> 0
+                comments
+              </p>
+            </div>
+            <div>
+              <h5 class="font-semibold">Alur KKP</h5>
+              <p class="">
+                <span class="text-slate-500">25th Juli 2020 /</span> 0 comments
+              </p>
+            </div>
+            <div>
+              <h5 class="font-semibold">Format Kop Amplop STIKOM</h5>
+              <p class="">
+                <span class="text-slate-500">24th Juli 2020 /</span> 0 comments
+              </p>
+            </div>
+            <div>
+              <h5 class="font-semibold">Surat Permohonan KKP</h5>
+              <p class="">
+                <span class="text-slate-500">24th Juli 2020 /</span> 0 comments
+              </p>
+            </div>
+            <div>
+              <h5 class="font-semibold">Format Surat Balasan KKP</h5>
+              <p class="">
+                <span class="text-slate-500">14th Juli 2020 /</span> 0 comments
+              </p>
+            </div>
+          </div>
         </div>
+        <div></div>
+        <div></div>
       </div>
-    </section>
+    </div>
+
+    <!-- footer akhir -->
+    <footer
+      class="w-full py-6 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400 border-t-black border-2 dark:text-white bg-slate-400 mb-20"
+    >
+      <div class="flex justify-around px-4">
+        <p class="text-sm">
+          Copyright &copy; 2023
+          <a
+            href="https://stikomambon.ac.id/"
+            class="hover:text-white dark:hover:text-teal-400"
+          >
+            ITB STIKOM Ambon</a
+          >
+          All rights reserved.
+        </p>
+        <p class="text-sm hidden tablet:flex">
+          Made with <span class="text-red-500">&hearts;</span> by 
+          <a
+            href="https://ulissayang.github.io/portfolio-tailwind-css/"
+            class="dark:hover:text-teal-400 hover:text-white"
+            >Ulis Sayang</a
+          >
+        </p>
+      </div>
+    </footer>
+
     <!-- section footer end -->
 
     <script src="src/js/script.js"></script>
