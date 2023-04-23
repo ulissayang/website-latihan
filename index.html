@@ -594,15 +594,115 @@
 
           <div class="flex-1">
             <!-- section slider start -->
-            <section>
-              <div class="">
-                <div class="w-full pt-4">
-                  <div class="w-full">
-                    <img
-                      src="https://source.unsplash.com/600x300?computer"
-                      alt=""
-                      class="rounded-lg"
-                    />
+            <section class="bg-red-500 mt-4 w-full overflow-hidden rounded-md">
+              <div class="w-full mx-auto">
+                <div class="w-full relative">
+                  <ul id="slider" class="">
+                    <li class="h-[50vh]">
+                      <img
+                        src="https://stikomambon.ac.id/beta/wp-content/uploads/Banner-Web-715x300-2.jpg"
+                        alt="images"
+                        class="h-full w-full"
+                      />
+                    </li>
+                    <li class="h-[50vh] hidden">
+                      <img
+                        src="https://stikomambon.ac.id/beta/wp-content/uploads/bursa-1.jpeg"
+                        alt="images"
+                        class="h-full w-full"
+                      />
+                    </li>
+                    <li class="h-[50vh] hidden">
+                      <img
+                        src="http://stikomambon.ac.id/beta/wp-content/uploads/IMG_0456.jpg"
+                        alt="images"
+                        class="h-full w-full"
+                      />
+                      <div
+                        class="hidden medium:block absolute py-4 px-2 bg-white bottom-6 left-4 rounded-md w-auto max-w-[70%] dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 dark:opacity-70"
+                      >
+                        <h3
+                          class="dark:text-white text-blue-900 text-xl font-bold pb-1"
+                        >
+                          Ospek Mahasiswa Baru Angkatan 2018/2019
+                        </h3>
+                        <span class="dark:text-slate-300 text-slate-500 text-sm"
+                          >Ospek Mahasiswa Baru Angkatan 2018/2019</span
+                        >
+                      </div>
+                    </li>
+                    <li class="h-[50vh] hidden">
+                      <img
+                        src="https://stikomambon.ac.id/beta/wp-content/uploads/DSC_2817-scaled.jpg"
+                        alt="images"
+                        class="h-full w-full"
+                      />
+                      <div
+                        class="hidden medium:block absolute py-4 px-2 bg-white bottom-6 left-4 rounded-md w-auto max-w-[70%] dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 dark:opacity-70"
+                      >
+                        <h3
+                          class="dark:text-white text-blue-900 text-xl font-bold pb-6"
+                        >
+                          Wisuda Sarjana dan Diploma angkatan VII
+                        </h3>
+                      </div>
+                    </li>
+                  </ul>
+                  <div
+                    class="absolute medium:top-auto top-0 medium:bottom-0 right-0 flex space-x-0"
+                  >
+                    <button
+                      onclick="prev()"
+                      class="p-2 dark:hover:bg-slate-500 bg-white opacity-20 hover:opacity-100 dark:hover:opacity-60 rounded-l-md"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.75 19.5L8.25 12l7.5-7.5"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      onclick="next()"
+                      class="p-2 dark:hover:bg-slate-500 bg-white opacity-20 hover:opacity-100 dark:hover:opacity-60 rounded-r-md"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="w-full dark:bg-gradient-to-br from-slate-600 via-slate-800 to-slate-700 bg-white hidden tablet:block medium:hidden"
+                >
+                  <div class="w-full h-full py-4 pl-2">
+                    <h3
+                      class="dark:text-sky-500 text-blue-800 text-xl font-bold pb-1"
+                    >
+                      Ospek Mahasiswa Baru Angkatan 2018/2019
+                    </h3>
+                    <span class="text-slate-500 dark:text-slate-300"
+                      >Ospek Mahasiswa Baru Angkatan 2018/2019</span
+                    >
                   </div>
                 </div>
               </div>
@@ -710,34 +810,50 @@
                 <!-- section galery start -->
                 <section class="pt-10">
                   <div class="">
-                    <div class="flex flex-wrap dark:bg-gradient-to-tr from-slate-600 via-slate-800 to-slate-700 bg-white px-1.5 py-4 rounded-md">
+                    <div
+                      class="dark:bg-gradient-to-tr from-slate-600 via-slate-800 to-slate-700 bg-white px-1.5 py-4 rounded-md"
+                    >
                       <div class="w-full px-4">
-                        <h2 class="text-sky-800 font-bold uppercase">Galery</h2>
-                        <div class="flex pt-3">
+                        <div class="flex justify-between items-center">
+                          <h2 class="text-sky-800 font-bold uppercase">
+                            Gallery
+                          </h2>
+                          <div class="flex">
+                            <span
+                              id="prev-btn"
+                              class="bullet h-3 w-3 bg-slate-500 rounded-full inline-block mr-1 cursor-pointer"
+                            ></span>
+                            <span
+                              id="next-btn"
+                              class="bullet h-3 w-3 bg-yellow-500 rounded-full inline-block cursor-pointer"
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="flex pt-3 overflow-x-hidden">
                           <div class="pr-3">
                             <img
-                              src="https://source.unsplash.com/100x50?computer"
+                              src="https://stikomambon.ac.id/beta/wp-content/uploads/IMG_9815-1.jpg"
                               alt=""
                               class="block rounded-sm"
                             />
                           </div>
                           <div class="pr-3">
                             <img
-                              src="https://source.unsplash.com/100x50?computer"
+                              src="https://stikomambon.ac.id/beta/wp-content/uploads/DSC_5731.jpg"
                               alt=""
                               class="block rounded-sm"
                             />
                           </div>
                           <div class="pr-3">
                             <img
-                              src="https://source.unsplash.com/100x50?computer"
+                              src="https://stikomambon.ac.id/beta/wp-content/uploads/IMG_1468.jpg"
                               alt=""
                               class="block rounded-sm"
                             />
                           </div>
                           <div class="pr-3">
                             <img
-                              src="https://source.unsplash.com/100x50?computer"
+                              src="https://stikomambon.ac.id/beta/wp-content/uploads/IMG-20200214-WA0035-1024x475.jpg"
                               alt=""
                               class="block rounded-sm"
                             />
@@ -778,7 +894,7 @@
                         class="w-48 aspect-[4/3] bg-black overflow-hidden relative"
                       >
                         <div
-                          class="w-full h-full absolute bg-cover bg-repeat bg-[url('https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/294932061_470169131781620_4511270315515238208_n.jpg?stp=dst-jpg_p130x130&_nc_cat=102&ccb=1-7&_nc_sid=dd9801&_nc_eui2=AeG55lO8k2LmBkOgJfHUMIfTOQpFeb0YNjA5CkV5vRg2MDK0EvoQvBNrEBIJSbGC4m74E2bntj8ugT-Gp5RigGYA&_nc_ohc=E8He_5pK_-AAX98oeUe&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfA-7-XQkZqHsZOG5E3ArkoU0BcLuyqsM-YJHNbJYZMiVw&oe=642D99E9')]"
+                          class="w-full h-full absolute bg-cover bg-repeat bg-[url('https://scontent.famq1-1.fna.fbcdn.net/v/t39.30808-6/340763239_925905942054291_7858736047035733817_n.jpg?stp=dst-jpg_p130x130&_nc_cat=107&ccb=1-7&_nc_sid=dd9801&_nc_ohc=Gzl8Z0zcd60AX8BVwAq&_nc_zt=23&_nc_ht=scontent.famq1-1.fna&edm=ANSO7JkEAAAA&oh=00_AfCyaSgJU8F2e_pb1Ka8cfxXe9CNEX2qKAmP9huL7bzrkA&oe=644681E0')]"
                         >
                           <div>
                             <img
@@ -886,7 +1002,7 @@
 
     <!-- footer akhir -->
     <footer
-      class="w-full py-6 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400 border-t-black border-2 dark:text-white bg-slate-400 mb-20"
+      class="w-full py-6 dark:bg-gradient-to-tr from-sky-700 via-slate-800 to-slate-400 border-t-black border-2 dark:text-white bg-slate-400"
     >
       <div class="flex justify-around px-4">
         <p class="text-sm">
@@ -900,7 +1016,7 @@
           All rights reserved.
         </p>
         <p class="text-sm hidden tablet:flex">
-          Made with <span class="text-red-500">&hearts;</span> by 
+          Made with <span class="text-red-500">&hearts;</span> by
           <a
             href="https://ulissayang.github.io/portfolio-tailwind-css/"
             class="dark:hover:text-teal-400 hover:text-white"

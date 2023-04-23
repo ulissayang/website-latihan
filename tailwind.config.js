@@ -3,7 +3,12 @@ module.exports = {
   content: ["index.html"],
   darkMode: "class",
   theme: {
-    screens: { tablet: "561px", laptop: "769px", larg: "1200px" },
+    screens: {
+      tablet: "561px",
+      laptop: "769px",
+      medium: "641px",
+      larg: "1200px",
+    },
     container: {
       center: true,
       padding: "16px",

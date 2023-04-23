@@ -36,7 +36,6 @@ dropdownContent.addEventListener("mouseleave", () => {
   }
 });
 
-
 const checkbox = document.querySelector("#toggle");
 const html = document.querySelector("html");
 const darkIcon = document.querySelector("#toggle svg:first-child");
@@ -72,3 +71,83 @@ if (
   lightIcon.classList.add("hidden");
   checkbox.checked = false;
 }
+
+//slider
+let currentSlideID = 1;
+let sliderElement = document.getElementById("slider");
+let totalSlides = sliderElement.childElementCount;
+let slideInterval;
+
+function next() {
+  currentSlideID++;
+  if (currentSlideID > totalSlides) {
+    currentSlideID = 1;
+  }
+  showSlide();
+}
+
+function prev() {
+  currentSlideID--;
+  if (currentSlideID < 1) {
+    currentSlideID = totalSlides;
+  }
+  showSlide();
+}
+
+function showSlide() {
+  slides = document.getElementById("slider").getElementsByTagName("li");
+  for (let index = 0; index < totalSlides; index++) {
+    const element = slides[index];
+    if (currentSlideID === index + 1) {
+      element.classList.remove("hidden");
+    } else {
+      element.classList.add("hidden");
+    }
+  }
+}
+
+slideInterval = setInterval(next, 10000); // ganti slide setiap 5 detik
+
+document.getElementById("nextBtn").addEventListener("click", function () {
+  clearInterval(slideInterval);
+  next();
+  slideInterval = setInterval(next, 10000);
+});
+
+document.getElementById("prevBtn").addEventListener("click", function () {
+  clearInterval(slideInterval);
+  prev();
+  slideInterval = setInterval(next, 10000);
+});
+
+// const prevBtn = document.getElementById("prev-btn");
+// const nextBtn = document.getElementById("next-btn");
+// const images = document.querySelectorAll(".flex > div");
+
+// let index = 0;
+// let length = images.length;
+// let visible = 3;
+
+// const shiftImages = (direction) => {
+//   if (direction === "left") {
+//     if (index > 0) {
+//       images[index - 1].classList.add("pr-3");
+//       images[index + visible - 1].classList.remove("pr-3");
+//       index--;
+//     }
+//   } else if (direction === "right") {
+//     if (index < length - visible) {
+//       images[index].classList.remove("pr-3");
+//       images[index + visible].classList.add("pr-3");
+//       index++;
+//     }
+//   }
+// };
+
+// prevBtn.addEventListener("click", () => {
+//   shiftImages("left");
+// });
+
+// nextBtn.addEventListener("click", () => {
+//   shiftImages("right");
+// });
