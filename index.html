@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website TailwindCSS</title>
+    <title>Website - ITB Stikom Ambon</title>
     <link rel="stylesheet" href="public/css/final.css" />
     <link
       rel="shortcut icon"
@@ -944,10 +944,12 @@
     <div
       class="w-full bg-slate-300 border-t-8 border-red-600 dark:bg-gradient-to-tl from-indigo-400 via-slate-400 to-slate-400 flex"
     >
-      <div class="grid grid-cols-2 pl-1 laptop:container w-full">
-        <div class="w-full laptop:w-1/2 pt-5 pb-32 tablet:pb-0">
+      <div
+        class="laptop:container grid tablet:grid-cols-2 pl-1 max-w-[250px] tablet:max-w-none"
+      >
+        <div class="laptop:max-w-xs pt-5 pb-32 tablet:pb-0">
           <h3 class="font-bold uppercase text-slate-800">ABOUT STIKOM</h3>
-          <p class="pt-3 pb-14 text-justify">
+          <p class="pt-3 pb-14 laptop:pb-0 text-justify">
             <b>Sekolah Tinggi Ilmu Komputer Ambon</b> lahir sebagai perwujudan
             komitmen Yayasan Ilmu Teknologi Komputer Indonesia Ambon untuk
             membangun masyarakat well informed. Komputer sebagai piranti utama
@@ -958,10 +960,12 @@
         </div>
 
         <div
-          class="w-full laptop:w-1/2 laptop:pt-5 col-start-1 row-start-3 tablet:col-start-2 tablet:row-start-2 laptop:col-auto laptop:row-auto"
+          class="laptop:max-w-xs laptop:pt-5 col-start-1 row-start-2 tablet:col-start-2 tablet:row-start-2 laptop:col-auto laptop:row-auto"
         >
           <h3 class="font-bold uppercase text-slate-800">Post Terbaru</h3>
-          <div class="grid gap-y-3 divide-blue-800 divide-y pl-1 pt-3 pb-52">
+          <div
+            class="grid gap-y-3 divide-blue-800 divide-y pl-1 pt-3 pb-52 laptop:pb-10"
+          >
             <div class="">
               <h5 class="font-semibold">Alur Ujian Skripsi-TA Online</h5>
               <p class="">
@@ -995,8 +999,6 @@
             </div>
           </div>
         </div>
-        <div></div>
-        <div></div>
       </div>
     </div>
 

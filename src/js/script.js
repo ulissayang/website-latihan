@@ -119,35 +119,3 @@ document.getElementById("prevBtn").addEventListener("click", function () {
   prev();
   slideInterval = setInterval(next, 10000);
 });
-
-// const prevBtn = document.getElementById("prev-btn");
-// const nextBtn = document.getElementById("next-btn");
-// const images = document.querySelectorAll(".flex > div");
-
-// let index = 0;
-// let length = images.length;
-// let visible = 3;
-
-// const shiftImages = (direction) => {
-//   if (direction === "left") {
-//     if (index > 0) {
-//       images[index - 1].classList.add("pr-3");
-//       images[index + visible - 1].classList.remove("pr-3");
-//       index--;
-//     }
-//   } else if (direction === "right") {
-//     if (index < length - visible) {
-//       images[index].classList.remove("pr-3");
-//       images[index + visible].classList.add("pr-3");
-//       index++;
-//     }
-//   }
-// };
-
-// prevBtn.addEventListener("click", () => {
-//   shiftImages("left");
-// });
-
-// nextBtn.addEventListener("click", () => {
-//   shiftImages("right");
-// });
